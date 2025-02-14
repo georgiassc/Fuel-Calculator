@@ -7,7 +7,7 @@ This repository contains a C program designed to help users determine whether et
 Ethanol has a lower energy density than gasoline, meaning that a vehicle consumes more ethanol to travel the same distance as it would with gasoline. On average:
 - A car requires approximately **1.3 liters of ethanol** to cover the same distance as **1 liter of gasoline**.
 
-### 🔢 The 70% Rule
+### The 70% Rule
 
 To decide which fuel is more economical, the **70% rule** is applied:
 - If the price of ethanol is **equal to or less than 70%** of the price of gasoline, **ethanol is the better option**.
