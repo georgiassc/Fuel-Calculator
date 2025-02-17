@@ -7,46 +7,84 @@ This repository contains a C program designed to help users determine whether et
 Ethanol has a lower energy density than gasoline, meaning that a vehicle consumes more ethanol to travel the same distance as it would with gasoline. On average:
 - A car requires approximately **1.3 liters of ethanol** to cover the same distance as **1 liter of gasoline**.
 
-### The 70% Rule
+### **The 70% Rule**  
 
-To decide which fuel is more economical, the **70% rule** is applied:
-- If the price of ethanol is **equal to or less than 70%** of the price of gasoline, **ethanol is the better option**.
-- If the price of ethanol is **greater than 70%** of the price of gasoline, **gasoline is the more cost-effective choice**.
+To determine which fuel is more economical, the **70% rule** is applied:  
+- If the price of ethanol is **less than or equal to 70%** of the price of gasoline, **ethanol is the better option**.  
+- If the price of ethanol is **greater than 70%** of the price of gasoline, **gasoline is the more cost-effective choice**.  
 
-The calculation formula is:
-
+The formula used is:  
 ```
-(Ethanol Price / Gasoline Price) * 100
+Gasoline Price * 0.70
 ```
+- If the result is **greater than the ethanol price**, ethanol is recommended.  
+- If the result is **less than the ethanol price**, gasoline is the better choice.  
+- If the result is exactly equal to the ethanol price, both fuels are equally cost-effective.  
 
-If the result is **≤ 70**, ethanol is the better choice; otherwise, gasoline is recommended.
+## **How the Program Works**  
 
-## How to Use
+The function `math(float pG, float pE)` receives two prices:  
+- `pG`: The price per liter of **gasoline**  
+- `pE`: The price per liter of **ethanol**  
 
-1. **Compile the program** using a C compiler (e.g., GCC):
+It then applies the **70% rule** and returns:  
+- `0` → Gasoline is the better choice.  
+- `1` → Ethanol is the better choice.  
+- `2` → Both are equally cost-effective.  
+
+## **How to Use**  
+
+1. **Compile the program** using a C compiler (e.g., GCC):  
    ```sh
    gcc fuel_calculator.c -o fuel_calculator
    ```
-2. **Run the program**:
+2. **Run the program**:  
    ```sh
    ./fuel_calculator
    ```
-3. **Enter fuel prices** when prompted:
-   - Price per liter of ethanol (in euros)
-   - Price per liter of gasoline (in euros)
-4. The program will display the **most cost-effective fuel** based on the input prices.
+3. **Enter fuel prices** when prompted:  
+   - Price per liter of ethanol  
+   - Price per liter of gasoline  
+4. The program will determine which fuel is the most cost-effective based on the 70% rule.  
 
-## Example Usage
+## **Example Calculation**  
 
-If the fuel prices are:
-- **Gasoline:** €5.00 per liter
-- **Ethanol:** €3.20 per liter
+If fuel prices are:  
+- **Gasoline:** €5.00 per liter  
+- **Ethanol:** €3.20 per liter  
 
-The calculation will be:
+The calculation is:  
 ```
-(3.20 / 5.00) * 100 = 64%
+5.00 * 0.70 = 3.50
 ```
-Since **64% is less than 70%**, ethanol is the more cost-effective choice.
+Since **€3.50 (70% of gasoline) is greater than €3.20 (ethanol price)**, ethanol is the more cost-effective choice.  
+
+---
+
+Essa versão mantém a lógica do código e explica de forma clara como o programa toma a decisão. Se precisar de mais ajustes, me avise! 🚀
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Technologies Used
 
