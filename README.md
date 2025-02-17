@@ -1,5 +1,7 @@
 # Fuel Cost Calculator
 
+![image](https://github.com/user-attachments/assets/c5f2c7f1-15ee-47ab-b756-bfb4a4fddaf1)
+
 This repository contains a C program designed to help users determine whether ethanol or gasoline is the more cost-effective fuel choice. The decision is based on the price-to-consumption ratio, ensuring users make an informed choice based on their vehicle’s efficiency and current fuel prices.
 
 ## How It Works
@@ -36,7 +38,7 @@ It then applies the **70% rule** and returns:
 
 1. **Compile the program** using a C compiler (e.g., GCC):  
    ```sh
-   gcc fuel_calculator.c -o fuel_calculator
+   cc main.c math.c putchar.c -o fuel_calculator
    ```
 2. **Run the program**:  
    ```sh
@@ -58,33 +60,6 @@ The calculation is:
 5.00 * 0.70 = 3.50
 ```
 Since **€3.50 (70% of gasoline) is greater than €3.20 (ethanol price)**, ethanol is the more cost-effective choice.  
-
----
-
-Essa versão mantém a lógica do código e explica de forma clara como o programa toma a decisão. Se precisar de mais ajustes, me avise! 🚀
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Technologies Used
 
